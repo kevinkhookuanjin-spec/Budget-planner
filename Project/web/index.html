@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Budget Planner</h1>
+
+      <div class="make-group">
+        <label for="income">Income per week:</label>
+        <div class="input-wrapper">
+          <span class="currency-prefix">RM</span
+          ><input type="number" id="income" value="0.00" step="0.01" min="0" />
+        </div>
+        <p class="help-text">How much money do you get in a week?</p>
+      </div>
+
+      <div class="make-group">
+        <label for="savings">Savings per week:</label>
+        <div class="input-wrapper">
+          <span class="currency-prefix">RM</span
+          ><input type="number" id="savings" value="0.00" step="0.01" min="0" />
+        </div>
+        <p class="help-text">How much money do you want to save every week?</p>
+      </div>
+
+      <button id="calculateBtn">Calculate</button>
+
+      <div class="cards-container">
+        <div class="card card-red">
+          <div class="card-header">Income</div>
+          <div class="card-body">
+            <div class="amount" id="showIncome">RM0.00</div>
+            <p class="card-text">Your weekly pocket money.</p>
+          </div>
+        </div>
+        <div class="card card-green">
+          <div class="card-header">Savings</div>
+          <div class="card-body">
+            <div class="amount" id="showSavings">RM0.00</div>
+            <p class="card-text">How much you want to save.</p>
+          </div>
+        </div>
+        <div class="card card-blue">
+          <div class="card-header">Spending Money</div>
+          <div class="card-body">
+            <div class="amount" id="showSpendings">RM0.00</div>
+            <p class="card-text">How much you can spend after saving.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
